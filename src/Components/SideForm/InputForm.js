@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./InputForm.css";
 
 // function InputForm() {
 //     return (
@@ -11,6 +12,7 @@ import React, { useState } from "react";
 const InputForm = () => {
   const [name, setName] = useState(""); //add all the elemetns later
   const [dot, setDot] = useState("mario");
+  const [slider, setSlider] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -70,6 +72,15 @@ const InputForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        <label className="">Add as a major Highlight:</label>
+        <label className="switch">
+          <input
+            type="checkbox"
+            value={slider}
+            onChange={(e) => setSlider(e.target.value)}
+          />
+          <span className="slider round"></span>
+        </label>
 
         <button>Add to transcript</button>
       </form>
