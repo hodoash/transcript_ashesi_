@@ -44,6 +44,28 @@ const InputForm = () => {
         <input
           type="text"
           required
+          maxLength={"120"}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label className="">Number of Hours:</label>
+        <input
+          type="number"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label className="">Reference Name:</label>
+        <input
+          type="text"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label className="">Reference Contact:</label>
+        <input
+          type="email"
+          required
           maxLength={"40"}
           value={name}
           onChange={(e) => setName(e.target.value)}
