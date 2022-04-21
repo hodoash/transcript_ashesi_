@@ -15,18 +15,20 @@ export default function Timeline(props) {
         icon={
           <SchoolIcon
             style={{ fill: "#5EA780", height: "125", width: "125" }}
-            title="wergh gfd erfg gfds gfre<br/>
-                werftg sdf dfg"
           />
         }
+        title="wergh gfd erfg gfds gfre<br/>
+        werftg sdf dfg"
       />
+
       <ExperienceCard
         icon={
           <SchoolIcon
             style={{ fill: "#5EA780", height: "125", width: "125" }}
-            title="wergh gfd erfg gfds gfre werftg sdf dfg"
           />
         }
+        title="wergh gfd erfg gfds gfre<br/>
+        werftg sdf dfg"
       />
     </div>
   );

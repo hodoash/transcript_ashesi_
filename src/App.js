@@ -5,9 +5,11 @@ import {
 } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import "./App.css";
-import TopSection from "./Components/Top/TopSection";
-import Pillars from "./Components/Mid/Pillars";
-import Timeline from "./Components/Mid/Timeline";
+
+import Page1 from "./Components/Pages/Page1";
+import Page2 from "./Components/Pages/Page2";
+import InputForm from "./Components/SideForm/InputForm";
+import TopNavSection from "./Components/TopNav/TopNavSection";
 
 const theme = createTheme({
   palette: {
@@ -52,10 +54,11 @@ const styles = makeStyles({
 function App() {
   const classes = styles();
   return (
-    <div>
-      <TopSection />
-      <Pillars />
-      <Timeline year="2017" />
+    <div className="">
+      <TopNavSection/>
+      <InputForm/>
+      <Page1/>
+      <Page2/>
     </div>
   );
 }
