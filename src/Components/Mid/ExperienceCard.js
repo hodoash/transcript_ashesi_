@@ -1,28 +1,35 @@
 import React from 'react'
-import { makeStyles } from "@material-ui/core/styles";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
-import { Typography } from "@material-ui/core";
 
-const styles = makeStyles({
-    wrapper:{
-        display: "flex",
-        flexDirection: "column",
-        alignment: "center",
-        padding: "0 5rem 0 5rem"
-    },
-    item:{
-        padingTop: "1rem"
-    }
-})
+const ExperienceCard=({experiences}) =>{
+    // icon1={
+    //          <SchoolIcon
+    //            style={{ fill: "#5EA780", height: "125", width: "125" }}
+    //          />
+    //        }
+    //write code to show icon based on data
 
-export default function ExperienceCard(props) {
-    const {icon,title} = props;
-    const classes = styles();
-
+    console.log("hi, this is data");
+    console.log(experiences);
     return (
-        <div className={classes.wrapper}>
-          <div className={classes.item}>{icon}</div>
-        <Typography className={classes.item}>{title}</Typography>
-      </div>
+        <div>
+            {/* <h1>this is {props.year}</h1> */}
+            {/* {experiences.map(experience=>(
+                <div className='' key={experience.id}>
+                    <div className=''>icon</div>
+                    <p className=''>{experience.discription}</p>
+                </div>
+            ))}
+             */}
+             {experiences.map(experience=>(
+                <div className='' key={experience.id}>
+                    <div className=''>icon</div>
+                    <p className=''>{experience.discription}</p>
+                </div>
+            ))}
+            
+        </div>
     )
 }
+
+export default ExperienceCard

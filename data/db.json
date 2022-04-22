@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "name": "Albert Hodo",
+      "degree": "B.Sc",
+      "major": "Computer Science",
+      "expectedDate": "2021",
+      "id": 1
+    },
+    {
+      "name": "Albert Hodo",
+      "degree": "B.Sc",
+      "major": "Computer Science",
+      "expectedDate": "2021",
+      "id": 2
+    }
+  ],
+
+  "experiences": [
+    {
+      "year": 1,
+      "category": 2,
+      "discription": "Winner: Student Excellence Awards",
+      "hours": "40",
+      "refName": "Lebene Gbedawo",
+      "refContact": "lebene.bed@ashesi.edu.gh",
+      "isHighlight": 0,
+      "id": 1
+    },
+    {
+      "year": 2,
+      "category": 2,
+      "discription": "Head of Communications Ashesi Start-up Launchpad",
+      "hours": "40",
+      "refName": "Lebene Gbedawo",
+      "refContact": "lebene.bed@ashesi.edu.gh",
+      "isHighlight": 0,
+      "id": 2
+    },
+    {
+      "year": 3,
+      "category": 2,
+      "discription": "Participant- Harvard Model United Nations (Boston) & Model United Nations KNUST (Kumasi)",
+      "hours": "40",
+      "refName": "Lebene Gbedawo",
+      "refContact": "lebene.bed@ashesi.edu.gh",
+      "isHighlight": 0,
+      "id": 3
+    },
+    {
+      "year": 1,
+      "category": 2,
+      "discription": "Community Service: Brekuso Primary school ICT Tutoring Project",
+      "hours": "40",
+      "refName": "Lebene Gbedawo",
+      "refContact": "lebene.bed@ashesi.edu.gh",
+      "isHighlight": 0,
+      "id": 4
+    },
+    {
+      "year": 4,
+      "category": 2,
+      "discription": "Head of Communications Ashesi Start-up Launchpad",
+      "hours": "40",
+      "refName": "Lebene Gbedawo",
+      "refContact": "lebene.bed@ashesi.edu.gh",
+      "isHighlight": 0,
+      "id": 5
+    }
+  ],
+  "images": [
+    {
+      "uid": 1,
+      "eid": 1,
+      "iLink": "https://i.imgur.com/pwpWaWu.jpg",
+      "id": 1
+    },
+    {
+        "uid": 1,
+        "eid": 3,
+        "iLink": "https://i.imgur.com/2jMCqQ2.jpg",
+        "id": 2
+      }
+  ]
+}

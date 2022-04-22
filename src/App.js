@@ -52,13 +52,15 @@ const styles = makeStyles({
 });
 
 function App() {
+  //write code to fetch data from database into json file
+
   const classes = styles();
   return (
     <div className="">
-      <TopNavSection/>
-      <InputForm/>
-      <Page1/>
-      <Page2/>
+      <TopNavSection />
+      <InputForm />
+      <Page1 />
+      <Page2 />
     </div>
   );
 }

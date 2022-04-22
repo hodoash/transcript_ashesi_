@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function ExperienceImageCard() {
-    return (
-        <div>
-            this is a card for the experiences
-        </div>
-    )
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 }
 
-export default ExperienceImageCard
+export default ExperienceImageCard;
