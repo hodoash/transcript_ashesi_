@@ -6,6 +6,8 @@ import {
 import { Typography } from "@material-ui/core";
 import "./App.css";
 
+import {createStore} from "redux";
+
 import Page1 from "./Components/Pages/Page1";
 import Page2 from "./Components/Pages/Page2";
 import InputForm from "./Components/SideForm/InputForm";

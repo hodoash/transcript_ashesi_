@@ -5,10 +5,10 @@ const MidSection = () => {
   return (
     <div>
       <h1>EXPERIENCE TIMELINE</h1>
-      <Timeline year="2017" />
-      <Timeline year="2018" />
-      <Timeline year="2019" />
-      <Timeline year="2020" />
+      <Timeline year="2017" y="1" />
+      <Timeline year="2018" y="2" />
+      <Timeline year="2019" y="3" />
+      <Timeline year="2020" y="4" />
     </div>
   );
 };

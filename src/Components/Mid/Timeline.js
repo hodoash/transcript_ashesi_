@@ -22,7 +22,7 @@ const Timeline = (props) => {
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {
-        experiences && ( <ExperienceCard  experiences={experiences}
+        experiences && ( <ExperienceCard  experiences={experiences} year={props.year} y={props.y}
         
         />
           // <ExperienceCard
