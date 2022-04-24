@@ -6,12 +6,14 @@ import {
 import { Typography } from "@material-ui/core";
 import "./App.css";
 
-import {createStore} from "redux";
+
 
 import Page1 from "./Components/Pages/Page1";
 import Page2 from "./Components/Pages/Page2";
 import InputForm from "./Components/SideForm/InputForm";
 import TopNavSection from "./Components/TopNav/TopNavSection";
+
+// import { connect } from "react-redux";
 
 const theme = createTheme({
   palette: {
@@ -53,9 +55,9 @@ const styles = makeStyles({
   },
 });
 
-function App() {
+const App=() =>{
   //write code to fetch data from database into json file
-
+  
   const classes = styles();
   return (
     <div className="">
@@ -67,4 +69,9 @@ function App() {
   );
 }
 
-export default App;
+// const mapStateToProps =  (state)=>{
+//   return{
+//     experiences:state.experience.experiences
+//   }
+// }
+ export default App;

@@ -9,8 +9,8 @@ const ExperienceCard = ({ experiences, year, y }) => {
   //        }
   //write code to show icon based on data
 
-  console.log("hi, this is data");
-  console.log(experiences);
+//   console.log("hi, this is data");
+//   console.log(experiences);
 
   return (
     <div>

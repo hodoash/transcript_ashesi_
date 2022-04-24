@@ -1,7 +1,13 @@
 import React from "react";
 import Timeline from "./Timeline";
+// import { useSelector } from "react-redux";
 
 const MidSection = () => {
+
+    // const userData=useSelector((state)=>state.user.userInfo)
+    // console.log("this is first redux")
+    // console.log(userData)
+
   return (
     <div>
       <h1>EXPERIENCE TIMELINE</h1>
