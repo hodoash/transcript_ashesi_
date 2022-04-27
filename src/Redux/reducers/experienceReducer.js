@@ -34,6 +34,10 @@ const innitState = {
 };
 
 const experienceReducer = (state = innitState, action) => {
+   switch(action.type){
+     case "CREATE_EXPERIENCE":
+       console.log("created peoject",action.experience)
+   }
   return state;
 };
 

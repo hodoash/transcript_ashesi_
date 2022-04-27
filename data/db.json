@@ -15,7 +15,6 @@
       "id": 2
     }
   ],
-
   "experiences": [
     {
       "year": 1,
@@ -66,6 +65,26 @@
       "refContact": "lebene.bed@ashesi.edu.gh",
       "isHighlight": 0,
       "id": 5
+    },
+    {
+      "year": 2,
+      "category": "SCHORLASHIP",
+      "discription": "asxcvaqsdfvbasdf wsdfvgbwedf wsdfgbwsdf wedfgwedf wedrfg",
+      "hours": "234",
+      "refName": "werfg wedrfg",
+      "refContact": "sdfgb@gmail.com",
+      "isHighlight": false,
+      "id": "cl2fat4xw00003s6ish73b0b2"
+    },
+    {
+      "year": "2018",
+      "category": "SCHORLASHIP",
+      "discription": "wedfgbhnwedfg",
+      "hours": "23456",
+      "refName": "swdfg",
+      "refContact": "asdfverfgh@gmail.com",
+      "isHighlight": true,
+      "id": "cl2fb7vwk00013s6iqavfa56l"
     }
   ],
   "images": [
@@ -76,10 +95,10 @@
       "id": 1
     },
     {
-        "uid": 1,
-        "eid": 3,
-        "iLink": "https://i.imgur.com/2jMCqQ2.jpg",
-        "id": 2
-      }
+      "uid": 1,
+      "eid": 3,
+      "iLink": "https://i.imgur.com/2jMCqQ2.jpg",
+      "id": 2
+    }
   ]
 }

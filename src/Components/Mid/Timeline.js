@@ -5,37 +5,36 @@ import useFetch from "../useFetch";
 import User from "../Top/User";
 
 const Timeline = (props) => {
-  const { error, isPending, data: experiences } = useFetch(
-   
-    "http://localhost:8000/experiences/"
-  );
-  
+  const {
+    error,
+    isPending,
+    data: experiences,
+  } = useFetch("http://localhost:8000/experiences/");
 
   return (
     <div>
-      
       <div>
         <h2>{props.year}</h2>
         <hr />
       </div>
-
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
-      {
-        experiences && ( <ExperienceCard  experiences={experiences} year={props.year} y={props.y}
-        
+      {experiences && (
+        <ExperienceCard
+          experiences={experiences}
+          year={props.year}
+          y={props.y}
         />
-          // <ExperienceCard
-          // experiences={experiences}
-          //   icon={
-          //     <SchoolIcon
-          //       style={{ fill: "#5EA780", height: "125", width: "125" }}
-          //     />
-          //   }
-            
-          // />
-        )
-      }
+        // <ExperienceCard
+        // experiences={experiences}
+        //   icon={
+        //     <SchoolIcon
+        //       style={{ fill: "#5EA780", height: "125", width: "125" }}
+        //     />
+        //   }
+
+        // />
+      )}
     </div>
   );
 };
