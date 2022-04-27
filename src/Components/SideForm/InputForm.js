@@ -1,4 +1,4 @@
-import React,{ Component} from "react";
+import React,{ Component,useState} from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
 import { connect } from "react-redux";
@@ -18,8 +18,8 @@ import UploadedImage from "../UploadedImage";
 // }
 
 class InputForm extends Component {
-  render(){
-    this.state={
+  // render=()=>()=>{
+    state={
       hours:"",
       refName:"",
       discription:"",
@@ -29,7 +29,12 @@ class InputForm extends Component {
       isHighlight:false,
       //image_:""
     };
-// const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
+    handleChange=(e)=>{
+      this.setState({
+        [e.target.id]:e.target.value
+      })
+    }
+  // const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
   // const [hours, setHours] = useState("");
   // const [refName, setRefName] = useState("");
   // const [refContact, setRefContact] = useState("");
@@ -65,7 +70,7 @@ class InputForm extends Component {
   //   });
   // }, []);
 
-  const handleSubmit = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     // const experience = {
  
@@ -116,79 +121,86 @@ class InputForm extends Component {
     //   console.log("this happened because of image");
     //   console.log(image_);
     // },[image_])
-
-  return (
-    <div className="FormInput">
-      <h3>Transcript Data</h3>
-      <form className="" onSubmit={handleSubmit}>
-        <label className="">Year:</label>
-        <select value={this.state.year} onChange={(e) => this.setState({year:e.state.value})}>
-          <option value="year1">2018</option>
-          <option value="year2">2019</option>
-          <option value="year3">2020</option>
-          <option value="year4">2021</option>
-        </select>
-        <label className="">Category:</label>
-        <select value={this.state.category} onChange={(e) => this.setState({category:e.target.value})}>
-          <option value="cat1">LEADERSHIP</option>
-          <option value="cat2">CITIZENSHIP</option>
-          <option value="cat3">SCHOLARSHIP</option>
-        </select>
-        <label className="">Brief Discription:</label>
-        <input
-          type="text"
-          required
-          maxLength={"120"}
-          value={this.state.discription}
-          onChange={(e) => this.setState({discription:e.target.value})}
-        />
-        <label className="">Number of Hours:</label>
-        <input
-          type="number"
-          required
-          value={this.state.hours}
-          onChange={(e) => this.setState({hours:e.target.value})}
-        />
-        <label className="">Reference Name:</label>
-        <input
-          type="text"
-          required
-          value={this.state.refName}
-          onChange={(e) => this.setState({refName:e.target.value})}
-        />
-        <label className="">Reference Contact:</label>
-        <input
-          type="email"
-          required
-          maxLength={"40"}
-          value={this.state.refContact}
-          onChange={(e) => this.setState({refContact:e.target.value})}
-        />
-        <label className="">Add as a major Highlight:</label>
-        <label className="switch">
+  render(){
+    return (
+      <div className="FormInput">
+        <h3>Transcript Data</h3>
+        <form className="" onSubmit={this.handleSubmit}>
+          <label className="">Year:</label>
+          <select value={this.year} id="year" onChange={this.handleChange}>
+            <option value="year1">2018</option>
+            <option value="year2">2019</option>
+            <option value="year3">2020</option>
+            <option value="year4">2021</option>
+          </select>
+          <label className="">Category:</label>
+          <select value={this.category} id="category" onChange={this.handleChange}>
+            <option value="cat1">LEADERSHIP</option>
+            <option value="cat2">CITIZENSHIP</option>
+            <option value="cat3">SCHOLARSHIP</option>
+          </select>
+          <label className="">Brief Discription:</label>
           <input
-            type="checkbox"
-            value={this.state.isHighlight}
-            onChange={(e) => this.setState({isHighlight:(prevState) => !prevState})} //(e.target.value)}
+            type="text"
+            required
+            maxLength={"120"}
+            value={this.discription}
+            id="discription"
+            onChange={this.handleChange}
           />
-          <span className="slider round"></span>
-        </label>
-
-        {/* {this.state.isHighlight && (
-          <div>
-            <DragAndDrop onChange={(e)=>setImage(e.target.value)} onDrop={onDrop} accept={"image/*"} />
-            {isImage && <UploadedImage image={temp}/>}
-          </div>
-           
-        )}
-         */}
-
-        {/* <label className="">Add Data to Transcript</label> */}
-        <button>Add to transcript</button>
-      </form>
-    </div>
-  );
-};
+          <label className="">Number of Hours:</label>
+          <input
+            type="number"
+            required
+            id="hours"
+            value={this.hours}
+            onChange={this.handleChange}
+          />
+          <label className="">Reference Name:</label>
+          <input
+            type="text"
+            required
+            id="refName"
+            value={this.refName}
+            onChange={this.handleChange}
+          />
+          <label className="">Reference Contact:</label>
+          <input
+            type="email"
+            required
+            id="refContact"
+            maxLength={"40"}
+            value={this.refContact}
+            onChange={this.handleChange}
+          />
+          <label className="">Add as a major Highlight:</label>
+          <label className="switch">
+            <input
+              type="checkbox"
+              id="isHighlight"
+              value={this.isHighlight}
+              onChange={this.handleChange} //(e.target.value)}
+            />
+            <span className="slider round"></span>
+          </label>
+  
+          {/* {this.state.isHighlight && (
+            <div>
+              <DragAndDrop onChange={(e)=>setImage(e.target.value)} onDrop={onDrop} accept={"image/*"} />
+              {isImage && <UploadedImage image={temp}/>}
+            </div>
+             
+          )}
+           */}
+  
+          {/* <label className="">Add Data to Transcript</label> */}
+          <button>Add to transcript</button>
+        </form>
+      </div>
+    );
+  }
+  
+// };
   }
   
 const mapDispatchToProps=(dispatch)=>{

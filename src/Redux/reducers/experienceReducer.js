@@ -8,7 +8,7 @@ const innitState = {
       refName: "Lebene Gbedawo",
       refContact: "lebene.bed@ashesi.edu.gh",
       isHighlight: 0,
-      id: 1
+      id: 1,
     },
     {
       year: 2,
@@ -18,26 +18,27 @@ const innitState = {
       refName: "Lebene Gbedawo",
       refContact: "lebene.bed@ashesi.edu.gh",
       isHighlight: 0,
-      id: 2
+      id: 2,
     },
     {
       year: 3,
       category: 2,
-      discription:"Participant- Harvard Model United Nations (Boston) & Model United Nations KNUST (Kumasi)",
+      discription:
+        "Participant- Harvard Model United Nations (Boston) & Model United Nations KNUST (Kumasi)",
       hours: "40",
       refName: "Lebene Gbedawo",
       refContact: "lebene.bed@ashesi.edu.gh",
       isHighlight: 0,
-      id: 3
+      id: 3,
     },
   ],
 };
 
 const experienceReducer = (state = innitState, action) => {
-   switch(action.type){
-     case "CREATE_EXPERIENCE":
-       console.log("created peoject",action.experience)
-   }
+  switch (action.type) {
+    case "CREATE_EXPERIENCE":
+      console.log("created peoject", action.experience);
+  }
   return state;
 };
 
