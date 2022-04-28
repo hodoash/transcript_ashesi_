@@ -37,9 +37,14 @@ const innitState = {
 const experienceReducer = (state = innitState, action) => {
   switch (action.type) {
     case "CREATE_EXPERIENCE":
-      console.log("created peoject", action.experience);
+      console.log("created exp on db", action.experience);
+      return state;
+    case "CREATE+EXPERIENCE_ERROR":
+      console.log("create experience error", action.err);
+      return state;
+    default:
+      return state;
   }
-  return state;
 };
 
 export default experienceReducer;
