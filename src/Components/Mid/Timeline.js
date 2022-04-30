@@ -3,9 +3,10 @@ import ExperienceCard from "./ExperienceCard";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 import useFetch from "../useFetch";
 import User from "../Top/User";
-// import { connect  } from "react-redux";
+import { connect  } from "react-redux";
 
 const Timeline = (props) => {
+  // const {experiences}= props
   const {
     error,
     isPending,
@@ -18,8 +19,8 @@ const Timeline = (props) => {
         <h2>{props.year}</h2>
         <hr />
       </div>
-      {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
+      {/* {error && <div>{error}</div>}
+      {isPending && <div>Loading...</div>} */}
       {experiences && (
         <ExperienceCard
           experiences={experiences}
@@ -39,4 +40,9 @@ const Timeline = (props) => {
     </div>
   );
 };
-export default Timeline;
+const mapStateToProps =  (state)=>{
+  return{
+    experiences:state.experience.experiences
+  }
+}
+export default connect(mapStateToProps)(Timeline);

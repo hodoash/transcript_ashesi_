@@ -20,11 +20,11 @@ import UploadedImage from "../UploadedImage";
 class InputForm extends Component {
   // render=()=>()=>{
     state={
-      hours:"",
+      hours:null,
       refName:"",
       discription:"",
       refContact:"",
-      year:"2018",
+      year:"",
       category:"SCHOLARSHIP",
       isHighlight:false,
       //image_:""
@@ -128,10 +128,10 @@ class InputForm extends Component {
         <form className="" onSubmit={this.handleSubmit}>
           <label className="">Year:</label>
           <select value={this.year} id="year" onChange={this.handleChange}>
-            <option value="year1">2018</option>
-            <option value="year2">2019</option>
-            <option value="year3">2020</option>
-            <option value="year4">2021</option>
+            <option value="1">2018</option>
+            <option value="2">2019</option>
+            <option value="3">2020</option>
+            <option value="4">2021</option>
           </select>
           <label className="">Category:</label>
           <select value={this.category} id="category" onChange={this.handleChange}>

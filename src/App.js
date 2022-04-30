@@ -13,6 +13,7 @@ import Page1 from "./Components/Pages/Page1";
 import Page2 from "./Components/Pages/Page2";
 import InputForm from "./Components/SideForm/InputForm";
 import TopNavSection from "./Components/TopNav/TopNavSection";
+import { createExperiece, fetchExperience } from "./Redux/actions/experienceActions";
 
 // import { connect } from "react-redux";
 
@@ -56,26 +57,43 @@ import TopNavSection from "./Components/TopNav/TopNavSection";
 //   },
 // });
 
-class App extends Component{
-  render(){
-    // const classes = styles();
-    return (
-      <div className="">
+// class App extends Component{
+//   render(){
+//     // const classes = styles();
+//     return (
+//       <div className="">
+//         <TopNavSection />
+//         <InputForm er/>
+//         <Page1 />
+//         <Page2 />
+//       </div>
+//     );
+//   }
+//   }
+  //write code to fetch data from database into json file
+
+const App=(props)=> {
+  return (
+    <div className="">
         <TopNavSection />
         <InputForm er/>
         <Page1 />
         <Page2 />
       </div>
-    );
-  }
-  }
-  //write code to fetch data from database into json file
-  
+  )
+}
+
   
 
-// const mapStateToProps =  (state)=>{
-//   return{
-//     experiences:state.experience.experiences
-//   }
-// }
- export default App;
+const mapStateToProps =  (state)=>{
+  return{
+    experiences:state.experience.experiences
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    experiences:()=>dispatch(fetchExperience)
+  }
+}
+ export default connect(mapStateToProps,mapDispatchToProps)(App);

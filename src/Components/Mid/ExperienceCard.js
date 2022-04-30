@@ -24,7 +24,7 @@ const ExperienceCard = ({ experiences, year, y }) => {
              */}
       {experiences
         .filter((experience) => {
-          return experience.year == y;
+          return parseInt(experience.year) == y;
         })
         .map((experience) => (
           <div className="" key={experience.id}>
