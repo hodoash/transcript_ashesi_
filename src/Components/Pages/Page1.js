@@ -5,8 +5,8 @@ import Pillars from "../Mid/Pillars";
 import Footer from "../Bottom/Footer";
 import MidSection from "../Mid/MidSection";
 
-import { connect } from "react-redux";
-import { render } from "@testing-library/react";
+// import { connect } from "react-redux";
+// import { render } from "@testing-library/react";
 
 class Page1 extends Component {
   render(){
@@ -27,10 +27,5 @@ class Page1 extends Component {
  
 };
 
-const mapStateToProps = (state) => {
-  return {
-    experiences: state.experience.experiences
-  }
-};
 
-export default connect(mapStateToProps)(Page1);
+export default Page1;

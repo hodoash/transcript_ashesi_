@@ -1,7 +1,7 @@
-import React,{ Component,useState} from "react";
+import React, { Component, useState } from "react";
 import DragAndDrop from "../DragAndDrop";
-import { createExperiece } from "../../Redux/actions/experienceActions";
-import { connect } from "react-redux";
+// import { createExperiece } from "../../Redux/actions/experienceActions";
+// import { connect } from "react-redux";
 // cuid is a simple library to generate unique IDs
 import cuid from "cuid";
 import "./InputForm.css";
@@ -9,31 +9,23 @@ import { Highlight } from "@material-ui/icons";
 import UploadedImage from "../UploadedImage";
 // import { Component } from "react";
 
-// function InputForm() {
-//     return (
-//         <div>
-//             this is the form section
-//         </div>
-//     )
-// }
-
 class InputForm extends Component {
   // render=()=>()=>{
-    state={
-      hours:"",
-      refName:"",
-      discription:"",
-      refContact:"",
-      year:"2018",
-      category:"SCHOLARSHIP",
-      isHighlight:false,
-      //image_:""
-    };
-    handleChange=(e)=>{
-      this.setState({
-        [e.target.id]:e.target.value
-      })
-    }
+  state = {
+    hours: "",
+    refName: "",
+    discription: "",
+    refContact: "",
+    year: "2018",
+    category: "SCHOLARSHIP",
+    isHighlight: false,
+    //image_:""
+  };
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value,
+    });
+  };
   // const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
   // const [hours, setHours] = useState("");
   // const [refName, setRefName] = useState("");
@@ -73,7 +65,7 @@ class InputForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // const experience = {
- 
+
     //   year,
     //   category,
     //   discription,
@@ -82,8 +74,7 @@ class InputForm extends Component {
     //   refContact,
     //   isHighlight,
     //   id:cuid()
-   
-      
+
     // }; //add all the form fields here
     // console.log("jhgfhgfdhgfdhgf")
     // console.log(image_)
@@ -94,8 +85,8 @@ class InputForm extends Component {
     //   id:cuid()
 
     // }
-    this.props.createExperiece(this.state)
-    
+
+    // this.props.createExperiece(this.state);
 
     // fetch("http://localhost:8000/experiences/", {
     //   method: "POST",
@@ -114,14 +105,13 @@ class InputForm extends Component {
     //   console.log("uploaded to server succesfully");
     //   //what to do next....eg: history.push('/');
     // });
-
   };
 
-    // useEffect(()=>{
-    //   console.log("this happened because of image");
-    //   console.log(image_);
-    // },[image_])
-  render(){
+  // useEffect(()=>{
+  //   console.log("this happened because of image");
+  //   console.log(image_);
+  // },[image_])
+  render() {
     return (
       <div className="FormInput">
         <h3>Transcript Data</h3>
@@ -134,7 +124,11 @@ class InputForm extends Component {
             <option value="year4">2021</option>
           </select>
           <label className="">Category:</label>
-          <select value={this.category} id="category" onChange={this.handleChange}>
+          <select
+            value={this.category}
+            id="category"
+            onChange={this.handleChange}
+          >
             <option value="cat1">LEADERSHIP</option>
             <option value="cat2">CITIZENSHIP</option>
             <option value="cat3">SCHOLARSHIP</option>
@@ -183,7 +177,7 @@ class InputForm extends Component {
             />
             <span className="slider round"></span>
           </label>
-  
+
           {/* {this.state.isHighlight && (
             <div>
               <DragAndDrop onChange={(e)=>setImage(e.target.value)} onDrop={onDrop} accept={"image/*"} />
@@ -192,20 +186,20 @@ class InputForm extends Component {
              
           )}
            */}
-  
+
           {/* <label className="">Add Data to Transcript</label> */}
           <button>Add to transcript</button>
         </form>
       </div>
     );
   }
-  
-// };
-  }
-  
-const mapDispatchToProps=(dispatch)=>{
-   return{
-     createExperiece :(experience)=>dispatch(createExperiece(experience))
-   }
+
+  // };
 }
-export default connect(null,mapDispatchToProps)(InputForm);
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     createExperiece: (experience) => dispatch(createExperiece(experience)),
+//   };
+// };
+export default InputForm;

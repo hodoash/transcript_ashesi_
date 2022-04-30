@@ -1,13 +1,13 @@
-import {
-  createTheme,
-  ThemeProvider,
-  makeStyles,
-} from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+// import {
+//   createTheme,
+//   ThemeProvider,
+//   makeStyles,
+// } from "@material-ui/core/styles";
+// import { Typography } from "@material-ui/core";
 import "./App.css";
 
-import Rract,{Component} from "react";
-import { connect } from "react-redux";
+import React,{Component} from "react";
+// import { connect } from "react-redux";
 
 import Page1 from "./Components/Pages/Page1";
 import Page2 from "./Components/Pages/Page2";
@@ -62,7 +62,7 @@ class App extends Component{
     return (
       <div className="">
         <TopNavSection />
-        <InputForm er/>
+        <InputForm />
         <Page1 />
         <Page2 />
       </div>
