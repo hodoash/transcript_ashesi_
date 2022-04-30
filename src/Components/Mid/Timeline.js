@@ -3,6 +3,7 @@ import ExperienceCard from "./ExperienceCard";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 import useFetch from "../useFetch";
 import User from "../Top/User";
+// import { connect  } from "react-redux";
 
 const Timeline = (props) => {
   const {
