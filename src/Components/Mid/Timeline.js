@@ -43,7 +43,7 @@ const Timeline = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    ...state,
+    // ...state,
     experiences: state.experience,
   };
 };

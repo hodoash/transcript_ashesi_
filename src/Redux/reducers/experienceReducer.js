@@ -1,15 +1,15 @@
 const innitState = {
   experiences: [
-    // {
-    //   year: 1,
-    //   category: 2,
-    //   discription: "Winner: Student Excellence Awards",
-    //   hours: "40",
-    //   refName: "Lebene Gbedawo",
-    //   refContact: "lebene.bed@ashesi.edu.gh",
-    //   isHighlight: 0,
-    //   id: 1,
-    // },
+    {
+      year: 1,
+      category: 2,
+      discription: "Winner: Student Excellence Awards",
+      hours: "40",
+      refName: "Lebene Gbedawo",
+      refContact: "lebene.bed@ashesi.edu.gh",
+      isHighlight: 0,
+      id: 1,
+    },
     // {
     //   year: 2,
     //   category: 2,
@@ -40,11 +40,14 @@ const experienceReducer = (state = innitState, action) => {
     case "CREATE_EXPERIENCE":
       console.log("created exp on db", action.experience);
       console.log("adding to state", action.experience);
-      return { ...state, experiences: action.experience };
+      return {
+        ...state,
+        experiences: [...state.experiences, action.experience],
+      };
 
     case "FETCH_EXPERIENCES":
       console.log("fetched exp from db", action.experiences);
-      return { ...state, experiences: action.experience };
+      return { ...state, experiences: action.experiences };
     case "CREATE_EXPERIENCE_ERROR":
       console.log("create experience error", action.err);
       return { ...state, error: action.err };
