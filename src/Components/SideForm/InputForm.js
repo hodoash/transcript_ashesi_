@@ -1,4 +1,4 @@
-import React,{ Component,useState} from "react";
+import React,{ Component,useState, useCallback} from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
 import { connect } from "react-redux";
@@ -46,7 +46,7 @@ class InputForm extends Component {
   // const [isImage,setIsImage]=useState(false);
   // const [image_, setImage] = useState([]); //   const [isHighlight, setHighlight] = useState(false); //false
 
-  // const onDrop = useCallback((acceptedFiles) => {
+  //  onDrop = useCallback((acceptedFiles) => {
   //   // Loop through accepted files
   //   acceptedFiles.map((file) => {
   //     // Initialize FileReader browser API
@@ -54,13 +54,13 @@ class InputForm extends Component {
   //     // onload callback gets called after the reader reads the file data
   //     reader.onload = function (e) {
   //       // add the image into the state. Since FileReader reading process is asynchronous, its better to get the latest snapshot state (i.e., prevState) and update it.
-  //       setImage((prevState) => [
-  //         ...prevState,
-  //         { id: cuid(), src: e.target.result },
-  //       ]);
-  //       setIsImage(true);
+  //       // setImage((prevState) => [
+  //       //   ...prevState,
+  //       //   { id: cuid(), src: e.target.result },
+  //       // ]);
+  //       // setIsImage(true);
   //       //  console.log(image_);
-  //       setTempImage(e.target.result)
+  //       // setTempImage(e.target.result)
 
   //     };
   //     // Read the file as Data URL (since we accept only images)
@@ -128,6 +128,7 @@ class InputForm extends Component {
         <form className="" onSubmit={this.handleSubmit}>
           <label className="">Year:</label>
           <select value={this.year} id="year" onChange={this.handleChange}>
+            <option value="">Select one</option>
             <option value="1">2018</option>
             <option value="2">2019</option>
             <option value="3">2020</option>
@@ -186,12 +187,12 @@ class InputForm extends Component {
   
           {/* {this.state.isHighlight && (
             <div>
-              <DragAndDrop onChange={(e)=>setImage(e.target.value)} onDrop={onDrop} accept={"image/*"} />
-              {isImage && <UploadedImage image={temp}/>}
+              <DragAndDrop onChange={this.handleChange} onDrop={this.onDrop} accept={"image/*"} />
+              {this.isImage && <UploadedImage image={this.temp}/>}
             </div>
              
-          )}
-           */}
+          )} */}
+          
   
           {/* <label className="">Add Data to Transcript</label> */}
           <button>Add to transcript</button>
