@@ -22,22 +22,25 @@ const Timeline = (props) => {
       </div>
       {/* {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>} */}
-      {experiences && (
-        <ExperienceCard
-          experiences={experiences}
-          year={props.year}
-          y={props.y}
-        />
-        // <ExperienceCard
-        // experiences={experiences}
-        //   icon={
-        //     <SchoolIcon
-        //       style={{ fill: "#5EA780", height: "125", width: "125" }}
-        //     />
-        //   }
+      {experiences &&
+        experiences.map((experience) => (
+          <div key={experience.id}>
+            <ExperienceCard
+              experience={experience}
+              year={props.year}
+              y={props.y}
+            />
+          </div>
+          // <ExperienceCard
+          // experiences={experiences}
+          //   icon={
+          //     <SchoolIcon
+          //       style={{ fill: "#5EA780", height: "125", width: "125" }}
+          //     />
+          //   }
 
-        // />
-      )}
+          // />
+        ))}
     </div>
   );
 };

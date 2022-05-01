@@ -1,8 +1,8 @@
 import React from "react";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 
-const ExperienceCard = ({ experiences, year, y }) => {
-  console.log("card level",experiences)
+const ExperienceCard = ({ experience, year, y }) => {
+  console.log("card level", experience);
   // icon1={
   //          <SchoolIcon
   //            style={{ fill: "#5EA780", height: "125", width: "125" }}
@@ -10,8 +10,8 @@ const ExperienceCard = ({ experiences, year, y }) => {
   //        }
   //write code to show icon based on data
 
-//   console.log("hi, this is data");
-//   console.log(experiences);
+  //   console.log("hi, this is data");
+  //   console.log(experiences);
 
   return (
     <div>
@@ -24,16 +24,12 @@ const ExperienceCard = ({ experiences, year, y }) => {
             ))}
              */}
 
-      {experiences
-        .filter((experience) => {
-          return parseInt(experience.year) == y;
-        })
-        .map((experience) => (
-          <div className="" key={experience.id}>
-            <div className="">icon</div>
-            <p className="">{experience.discription}</p>
-          </div>
-        ))}
+      {experience.year === y && (
+        <div className="">
+          <div className="">icon</div>
+          <p className="">{experience.discription}</p>
+        </div>
+      )}
     </div>
   );
 };
