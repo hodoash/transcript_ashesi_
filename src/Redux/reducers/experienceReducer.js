@@ -46,8 +46,8 @@ const experienceReducer = (state = innitState, action) => {
       };
 
     case "FETCH_EXPERIENCES":
-      console.log("fetched exp from db", action.experiences);
-      return { ...state, experiences: action.experiences };
+      console.log("fetched exp from db", action.payload);
+      return { ...state, experiences: action.payload };
     case "CREATE_EXPERIENCE_ERROR":
       console.log("create experience error", action.err);
       return { ...state, error: action.err };

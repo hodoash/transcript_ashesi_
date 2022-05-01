@@ -21,26 +21,10 @@ export const createExperiece = (experience) => {
   };
 };
 
-export const fetchExperiences = () => {
+export const fetchExperiences = (payload) => {
   return (dispatch, getState) => {
+    console.log({ payload });
+    dispatch({ type: "FETCH_EXPERIENCES", payload });
     //make async call to db
-    console.log("edfghjhgfd")
-    //{...experience add the user id and teh rest}
-    fetch("http://localhost:8000/experiences/", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify(experience),
-    })
-      .then((Response) => {
-        console.log("downloaded from server succesfully");
-        dispatch({ type: "FETCH_EXPERIENCES", Response});
-        //what to do next....eg: history.push('/');
-      })
-      // .then(() => {
-      //   // dispatch({ type: "FETCH_EXPERIENCES" });
-      // })
-      .catch((err) => {
-        dispatch({ type: "CREATE_EXPERIENCE_ERROR", err });
-      });
   };
 };
