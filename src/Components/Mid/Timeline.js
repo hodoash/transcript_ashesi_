@@ -3,15 +3,16 @@ import ExperienceCard from "./ExperienceCard";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 import useFetch from "../useFetch";
 import User from "../Top/User";
-import { connect  } from "react-redux";
+import { connect } from "react-redux";
 
 const Timeline = (props) => {
-  // const {experiences}= props
-  const {
-    error,
-    isPending,
-    data: experiences,
-  } = useFetch("http://localhost:8000/experiences/");
+  const { experiences } = props.experiences;
+  console.log("timeline", experiences);
+  // const {
+  //   error,
+  //   isPending,
+  //   data: experiences,
+  // } = useFetch("http://localhost:8000/experiences/");
 
   return (
     <div>
@@ -40,9 +41,10 @@ const Timeline = (props) => {
     </div>
   );
 };
-const mapStateToProps =  (state)=>{
-  return{
-    experiences:state.experience.experiences
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+    experiences: state.experience,
+  };
+};
 export default connect(mapStateToProps)(Timeline);

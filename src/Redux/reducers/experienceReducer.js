@@ -32,22 +32,22 @@ const innitState = {
     //   id: 3,
     // },
   ],
-  error:[null]
+  error: [null],
 };
 
 const experienceReducer = (state = innitState, action) => {
   switch (action.type) {
     case "CREATE_EXPERIENCE":
       console.log("created exp on db", action.experience);
-       console.log("adding to state",action.experience);
-      return{ ...state, experience:action.experience}
-      
-      case "FETCH_EXPERIENCES":
-        console.log("fetched exp from db", action.experience);
-        return{ ...state, experience:action.experience}
+      console.log("adding to state", action.experience);
+      return { ...state, experiences: action.experience };
+
+    case "FETCH_EXPERIENCES":
+      console.log("fetched exp from db", action.experiences);
+      return { ...state, experiences: action.experience };
     case "CREATE_EXPERIENCE_ERROR":
       console.log("create experience error", action.err);
-      return { ...state, error:action.err};
+      return { ...state, error: action.err };
     default:
       return state;
   }

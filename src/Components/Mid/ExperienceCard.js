@@ -2,6 +2,7 @@ import React from "react";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 
 const ExperienceCard = ({ experiences, year, y }) => {
+  console.log("card level",experiences)
   // icon1={
   //          <SchoolIcon
   //            style={{ fill: "#5EA780", height: "125", width: "125" }}
@@ -22,6 +23,7 @@ const ExperienceCard = ({ experiences, year, y }) => {
                 </div>
             ))}
              */}
+
       {experiences
         .filter((experience) => {
           return parseInt(experience.year) == y;

@@ -6,14 +6,14 @@ import {
 import { Typography } from "@material-ui/core";
 import "./App.css";
 
-import Rract,{Component} from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Page1 from "./Components/Pages/Page1";
 import Page2 from "./Components/Pages/Page2";
 import InputForm from "./Components/SideForm/InputForm";
 import TopNavSection from "./Components/TopNav/TopNavSection";
-import { createExperiece, fetchExperience } from "./Redux/actions/experienceActions";
+import { fetchExperiences } from "./Redux/actions/experienceActions";
 
 // import { connect } from "react-redux";
 
@@ -70,30 +70,30 @@ import { createExperiece, fetchExperience } from "./Redux/actions/experienceActi
 //     );
 //   }
 //   }
-  //write code to fetch data from database into json file
+//write code to fetch data from database into json file
 
-const App=(props)=> {
+const App = (props) => {
+  console.log("app level", props);
   return (
     <div className="">
-        <TopNavSection />
-        <InputForm er/>
-        <Page1 />
-        <Page2 />
-      </div>
-  )
-}
+      <TopNavSection />
+      <InputForm er />
+      <Page1 />
+      <Page2 />
+    </div>
+  );
+};
 
-  
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+    experiences: state.experiences,
+  };
+};
 
-const mapStateToProps =  (state)=>{
-  return{
-    experiences:state.experience.experiences
-  }
-}
-
-const mapDispatchToProps=(dispatch)=>{
-  return{
-    experiences:()=>dispatch(fetchExperience)
-  }
-}
- export default connect(mapStateToProps,mapDispatchToProps)(App);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    experiences: () => dispatch(fetchExperiences()),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);
