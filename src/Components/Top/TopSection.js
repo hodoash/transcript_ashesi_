@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../../ashesi_logo.jpeg";
+import logo from "../../ashesi_logo.png";
 import TopInfo from "./TopInfo";
 import StudentInfo from "./StudentInfo";
 
 export default function TopSection() {
   return (
     <div>
-      <div className="App  grid grid-cols-6 gap-7 pt-4">
-        <div className="w-44 col-span-1">
+      <div className="App  grid grid-cols-6 gap-7 pt-10">
+        <div className="w-45 pl-5 mt-5 col-span-1">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <div className="col-span-3">
