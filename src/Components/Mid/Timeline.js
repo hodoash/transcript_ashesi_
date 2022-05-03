@@ -18,7 +18,7 @@ const Timeline = (props) => {
     <div>
       <div>
         <h2 className="text-lg mb-2">{props.year}</h2>
-        <div className="px-2 ">
+        <div className="px-2 mb-5">
         <div className="bg-red-300 p-0.5 rounded"></div>
       </div>
       </div>
