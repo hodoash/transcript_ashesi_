@@ -63,24 +63,21 @@ const App = (props) => {
   return (
     <div className="bg-zinc-200 p-10">
       <TopNavSection />
- <div className="  grid grid-cols-4 gap-10">
-      
-      <div className="col-span-3 rounded ">
-        <div className="bg-white mb-5">
-        <Page1 />
+      <div className="  grid grid-cols-4 gap-10">
+        <div className="col-span-3 rounded ">
+          <div className="bg-white rounded mb-10">
+            <Page1 />
+          </div>
+          <div className="bg-white">
+            <Page2 />
+          </div>
         </div>
-       <div className="bg-white mb-5">
-       <Page2 />
-       </div>
-        
-      </div>
 
-      <div className="col-span-1 rounded bg-white">
-        <InputForm er />
+        <div className="col-span-1 rounded  bg-white">
+          <InputForm er />
+        </div>
       </div>
     </div>
-    </div>
-   
   );
 };
 

@@ -6,7 +6,7 @@ import StudentInfo from "./StudentInfo";
 export default function TopSection() {
   return (
     <div>
-      <div className="App mt-11 grid grid-cols-6 gap-7">
+      <div className="App  grid grid-cols-6 gap-7 pt-4">
         <div className="w-44 col-span-1">
           <img src={logo} className="App-logo" alt="logo" />
         </div>

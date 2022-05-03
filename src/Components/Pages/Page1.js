@@ -14,7 +14,7 @@ class Page1 extends Component {
     const {experiences}=this.props;
     console.log(this.props);
     return (
-      <div className="">
+      <div className=" ">
         <TopSection />
         <Pillars />
         <MidSection exp={experiences} />

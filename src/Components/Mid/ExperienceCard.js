@@ -27,15 +27,15 @@ const ExperienceCard = ({ experience, year, y }) => {
              */}
 
       {experience.year === y && (
-        <div className="">
-          <div className="">
-            {experience.category==="cat1" &&(<img src={scholarship} className="mx-auto w-8" alt="scholarship icon" />)}
-            {experience.category==="cat2" &&(<img src={leadership} className="mx-auto w-8" alt="leadership icon" />)}
-            {experience.category==="cat3" &&(<img src={citizenship} className="mx-auto w-8" alt="citizenship icon" />)}
+        <div className="flex text-left items-start mb-3">
+          <div className="mt-2">
+            {experience.category==="cat1" &&(<img src={scholarship} className="mx-auto w-6" alt="scholarship icon" />)}
+            {experience.category==="cat2" &&(<img src={leadership} className="mx-auto w-5" alt="leadership icon" />)}
+            {experience.category==="cat3" &&(<img src={citizenship} className="mx-auto w-6" alt="citizenship icon" />)}
           
             </div>
           
-          <p className="">{experience.discription}</p>
+          <p className="text-lg ml-2">{experience.discription}</p>
         </div>
       )}
     </div>
