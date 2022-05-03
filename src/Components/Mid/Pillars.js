@@ -5,34 +5,19 @@ import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 // import AccountGroupIcon from "@material-ui/icons/AccountGroup";
 // import EarthIcon from "@material-ui/icons/Earth";
 
-const styles = makeStyles({
-    wrapper: {
-      width: "65%",
-      margin: "auto",
-      textAlign: "center",
-    },
-    bigSpace: {
-      marginTop: "5rem",
-    },
-    littleSpace: {
-      marginTop: "2.5rem",
-    },
-    grid: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexWrap: "wrap",
-    },
-  });
+
+
 
 
 export default function Pillars() {
-    const classes = styles();
+   
   return (
-    <div>
-      <h1>SUMMARY OF ASHESI EXPERIENCES</h1>
-       
-        <div className={`${classes.grid} ${classes.bigSpace}`}>
+    <div className=" mt-2.5">
+      <div className="text-center">
+      <h1 className="text-xl">SUMMARY OF ASHESI EXPERIENCES</h1>
+      </div> 
+       <div className="grid grid-cols-3 items-center">
+       <div className="">
         <Grid
              icon={
                <SchoolIcon
@@ -46,7 +31,7 @@ export default function Pillars() {
      
         </div>
     
-        <div className={`${classes.grid} ${classes.bigSpace}`}>
+        <div className="">
         <Grid
              icon={
                <SchoolIcon
@@ -60,7 +45,7 @@ export default function Pillars() {
   
         </div>
      
-        <div className={`${classes.grid} ${classes.bigSpace}`}>
+        <div className="">
         <Grid
              icon={
                <SchoolIcon
@@ -73,6 +58,8 @@ export default function Pillars() {
           
       
         </div>
+       </div>
+       
       
       
       

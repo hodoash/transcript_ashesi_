@@ -61,12 +61,22 @@ const App = (props) => {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-zinc-200 p-10">
       <TopNavSection />
-      <InputForm er />
-      <Page1 />
-      <Page2 />
+ <div className="  grid grid-cols-4 gap-10">
+      
+      <div className="col-span-3 rounded bg-white">
+        
+        <Page1 />
+        <Page2 />
+      </div>
+
+      <div className="col-span-1 rounded bg-white">
+        <InputForm er />
+      </div>
     </div>
+    </div>
+   
   );
 };
 
