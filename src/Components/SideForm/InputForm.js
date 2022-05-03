@@ -25,7 +25,7 @@ class InputForm extends Component {
       discription:"",
       refContact:"",
       year:"",
-      category:"SCHOLARSHIP",
+      category:"",
       isHighlight:false,
       //image_:""
     };

@@ -1,7 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "./Grid"
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
+import leadership from "../../leadership.svg";
+import citizenship from "../../citizenship.svg";
+import scholarship from "../../scholarship.svg";
 // import AccountGroupIcon from "@material-ui/icons/AccountGroup";
 // import EarthIcon from "@material-ui/icons/Earth";
 
@@ -16,13 +18,11 @@ export default function Pillars() {
       <div className="text-center">
       <h1 className="text-xl">SUMMARY OF ASHESI EXPERIENCES</h1>
       </div> 
-       <div className="grid grid-cols-3 items-center">
-       <div className="">
+       <div className="mt-6 grid grid-cols-3 items-center">
+       <div className=" m-auto">
         <Grid
              icon={
-               <SchoolIcon
-                 style={{ fill: "#4360A6", height: "125", width: "125" }}
-               />
+              <img src={scholarship} className="mx-auto w-16" alt="scholarship icon" />
              }
              title="SCHORLASHIP"
              hours="543 HRS"
@@ -31,12 +31,10 @@ export default function Pillars() {
      
         </div>
     
-        <div className="">
+        <div className="m-auto">
         <Grid
              icon={
-               <SchoolIcon
-                 style={{ fill: "#4360A6", height: "125", width: "125" }}
-               />
+              <img src={leadership} className="mx-auto w-14" alt="leadersip icon" />
              }
              title="LEADERSHIP"
              hours="543 HRS"
@@ -45,12 +43,10 @@ export default function Pillars() {
   
         </div>
      
-        <div className="">
+        <div className="m-auto">
         <Grid
              icon={
-               <SchoolIcon
-                 style={{ fill: "#4360A6", height: "125", width: "125" }}
-               />
+              <img src={citizenship} className="mx-auto w-14" alt="citizenship icon" />
              }
              title="CITIZENSHIP"
              hours="543 HRS"

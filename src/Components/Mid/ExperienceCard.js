@@ -1,5 +1,7 @@
 import React from "react";
-import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
+import leadership from "../../leadership.svg";
+import citizenship from "../../citizenship.svg";
+import scholarship from "../../scholarship.svg";
 
 const ExperienceCard = ({ experience, year, y }) => {
   console.log("card level", experience);
@@ -26,7 +28,13 @@ const ExperienceCard = ({ experience, year, y }) => {
 
       {experience.year === y && (
         <div className="">
-          <div className="">icon</div>
+          <div className="">
+            {experience.category==="cat1" &&(<img src={scholarship} className="mx-auto w-8" alt="scholarship icon" />)}
+            {experience.category==="cat2" &&(<img src={leadership} className="mx-auto w-8" alt="leadership icon" />)}
+            {experience.category==="cat3" &&(<img src={citizenship} className="mx-auto w-8" alt="citizenship icon" />)}
+          
+            </div>
+          
           <p className="">{experience.discription}</p>
         </div>
       )}

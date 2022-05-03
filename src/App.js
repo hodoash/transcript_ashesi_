@@ -65,10 +65,14 @@ const App = (props) => {
       <TopNavSection />
  <div className="  grid grid-cols-4 gap-10">
       
-      <div className="col-span-3 rounded bg-white">
-        
+      <div className="col-span-3 rounded ">
+        <div className="bg-white mb-5">
         <Page1 />
-        <Page2 />
+        </div>
+       <div className="bg-white mb-5">
+       <Page2 />
+       </div>
+        
       </div>
 
       <div className="col-span-1 rounded bg-white">

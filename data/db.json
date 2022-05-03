@@ -22,7 +22,7 @@
       "discription": "testing",
       "refContact": "sdfvfds@gmsil.com",
       "year": "1",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 1
     },
@@ -32,7 +32,7 @@
       "discription": "testing",
       "refContact": "sdfvfds@gmsil.com",
       "year": "2",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 2
     },
@@ -62,30 +62,11 @@
       "discription": "william is the cause of my problems",
       "refContact": "qwefghgfd@gmail.com",
       "year": "2",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 5
     },
-    {
-      "hours": "234",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "frecy tenkorang is a cheat",
-      "refContact": "qwefghgfd@gmail.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 6
-    },
-    {
-      "hours": "234",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "dsfvgbfd sdfgbhgfd",
-      "refContact": "qwefghgfd@gmail.com",
-      "year": "",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 7
-    },
+  
     {
       "hours": "2345",
       "refName": "sdfvbvfd dfgfd",
@@ -102,7 +83,7 @@
       "discription": "wilain is a nice person",
       "refContact": "sdfvfds@gmsil.com",
       "year": "3",
-      "category": "cat2",
+      "category": "cat1",
       "isHighlight": false,
       "id": 9
     },
@@ -112,30 +93,11 @@
       "discription": "edcedcedc",
       "refContact": "wfgfde@gmail.com",
       "year": "2",
-      "category": "cat2",
+      "category": "cat1",
       "isHighlight": false,
       "id": 10
     },
-    {
-      "hours": "90",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "albert senyo hodo",
-      "refContact": "sdfvfds@gmsil.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 11
-    },
-    {
-      "hours": "23456",
-      "refName": "23432svcxc",
-      "discription": "thest sdfbvfd",
-      "refContact": "dfgbhg@gmail.com",
-      "year": "1",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 12
-    },
+  
     {
       "hours": "234",
       "refName": "sdfvbvfd dfgfd",
@@ -147,26 +109,6 @@
       "id": 13
     },
     {
-      "hours": "23",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "dsfvgbfd sdfgbhgfd",
-      "refContact": "sdfvfds@gmsil.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 14
-    },
-    {
-      "hours": "234",
-      "refName": "23432svcxc",
-      "discription": "thest one",
-      "refContact": "dfgbhg@gmail.com",
-      "year": "4",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 15
-    },
-    {
       "hours": "234",
       "refName": "sdfvbvfd dfgfd",
       "discription": "thest one",
@@ -175,16 +117,6 @@
       "category": "cat2",
       "isHighlight": false,
       "id": 16
-    },
-    {
-      "hours": "234",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "thest one",
-      "refContact": "wfgfde@gmail.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 17
     },
     {
       "hours": "234",
@@ -202,7 +134,7 @@
       "discription": "dsfvgbfd sdfgbhgfd",
       "refContact": "qwefghgfd@gmail.com",
       "year": "1",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 19
     },
@@ -216,23 +148,14 @@
       "isHighlight": false,
       "id": 20
     },
-    {
-      "hours": "2",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "thest one",
-      "refContact": "sdfvfds@gmsil.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 21
-    },
+
     {
       "hours": "24",
       "refName": "sdfvbvfd dfgfd",
       "discription": "dsfvgbfd sdfgbhgfd",
       "refContact": "qwefghgfd@gmail.com",
       "year": "4",
-      "category": "cat2",
+      "category": "cat1",
       "isHighlight": false,
       "id": 22
     },
@@ -267,22 +190,12 @@
       "id": 25
     },
     {
-      "hours": "2345",
-      "refName": "23432svcxc",
-      "discription": "add for error",
-      "refContact": "sdfvfds@gmsil.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 26
-    },
-    {
       "hours": "2",
       "refName": "23432svcxc",
       "discription": "test for yeear 1",
       "refContact": "qwefghgfd@gmail.com",
       "year": "1",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 27
     },
@@ -292,7 +205,7 @@
       "discription": "thest one",
       "refContact": "qwefghgfd@gmail.com",
       "year": "1",
-      "category": "SCHOLARSHIP",
+      "category": "cat1",
       "isHighlight": false,
       "id": 28
     }

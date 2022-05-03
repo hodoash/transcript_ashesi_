@@ -17,8 +17,10 @@ const Timeline = (props) => {
   return (
     <div>
       <div>
-        <h2>{props.year}</h2>
-        <hr />
+        <h2 className="text-lg mb-2">{props.year}</h2>
+        <div className="px-2 ">
+        <div className="bg-red-300 p-0.5 rounded"></div>
+      </div>
       </div>
       {/* {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>} */}

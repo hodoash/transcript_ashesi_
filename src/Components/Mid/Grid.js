@@ -1,31 +1,21 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 
-import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles({
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    alignment: "center",
-    padding: "0 5rem 0 5rem",
-  },
-  item: {
-    padingTop: "1rem",
-  },
-});
+
 
 export default function Grid(props) {
   const { icon, title, hours } = props;
-  const classes = styles();
+
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.item}>{icon}</div>
-      <Typography className={classes.item}>{title}</Typography>
-      <div className={classes.item}>
-        <hr />
+    <div className="text-center ">
+      <div className="content-center">{icon}</div>
+      <a className="text-sm">{title}</a>
+      <div className="">
+      <div className="px-2 ">
+        <div className="bg-red-600 px-1 py-0.5 rounded"></div>
       </div>
-      <Typography className={classes.item}>{hours}</Typography>
+      </div>
+      <a className="text-lg">{hours}</a>
     </div>
   );
 }
