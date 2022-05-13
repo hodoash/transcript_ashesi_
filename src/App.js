@@ -63,8 +63,8 @@ const App = (props) => {
   return (
     <div className="bg-zinc-200 p-10">
       <TopNavSection />
-      <div className="  grid grid-cols-4 gap-10">
-        <div className="col-span-3 rounded ">
+      <div className="  grid grid-cols-5 gap-10">
+        <div className="col-span-4 rounded ">
           <div className="bg-white rounded mb-10">
             <Page1 />
           </div>

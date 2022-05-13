@@ -1,4 +1,4 @@
-import React,{ Component,useState, useCallback} from "react";
+import React, { Component, useState, useCallback } from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
 import { connect } from "react-redux";
@@ -19,21 +19,21 @@ import UploadedImage from "../UploadedImage";
 
 class InputForm extends Component {
   // render=()=>()=>{
-    state={
-      hours:null,
-      refName:"",
-      discription:"",
-      refContact:"",
-      year:"",
-      category:"",
-      isHighlight:false,
-      //image_:""
-    };
-    handleChange=(e)=>{
-      this.setState({
-        [e.target.id]:e.target.value
-      })
-    }
+  state = {
+    hours: null,
+    refName: "",
+    discription: "",
+    refContact: "",
+    year: "",
+    category: "",
+    isHighlight: false,
+    //image_:""
+  };
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value,
+    });
+  };
   // const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
   // const [hours, setHours] = useState("");
   // const [refName, setRefName] = useState("");
@@ -73,7 +73,7 @@ class InputForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // const experience = {
- 
+
     //   year,
     //   category,
     //   discription,
@@ -82,8 +82,7 @@ class InputForm extends Component {
     //   refContact,
     //   isHighlight,
     //   id:cuid()
-   
-      
+
     // }; //add all the form fields here
     // console.log("jhgfhgfdhgfdhgf")
     // console.log(image_)
@@ -94,8 +93,7 @@ class InputForm extends Component {
     //   id:cuid()
 
     // }
-    this.props.createExperiece(this.state)
-    
+    this.props.createExperiece(this.state);
 
     // fetch("http://localhost:8000/experiences/", {
     //   method: "POST",
@@ -114,99 +112,128 @@ class InputForm extends Component {
     //   console.log("uploaded to server succesfully");
     //   //what to do next....eg: history.push('/');
     // });
-
   };
 
-    // useEffect(()=>{
-    //   console.log("this happened because of image");
-    //   console.log(image_);
-    // },[image_])
-  render(){
+  // useEffect(()=>{
+  //   console.log("this happened because of image");
+  //   console.log(image_);
+  // },[image_])
+  render() {
     return (
-      <div className="FormInput">
-        <h3>Transcript Data</h3>
-        <form className="" onSubmit={this.handleSubmit}>
-          <label className="">Year:</label>
-          <select value={this.year} id="year" onChange={this.handleChange}>
-            <option value="">Select one</option>
-            <option value="1">2018</option>
-            <option value="2">2019</option>
-            <option value="3">2020</option>
-            <option value="4">2021</option>
-          </select>
-          <label className="">Category:</label>
-          <select value={this.category} id="category" onChange={this.handleChange}>
-            <option value="cat1">LEADERSHIP</option>
-            <option value="cat2">CITIZENSHIP</option>
-            <option value="cat3">SCHOLARSHIP</option>
-          </select>
-          <label className="">Brief Discription:</label>
-          <input
-            type="text"
-            required
-            maxLength={"120"}
-            value={this.discription}
-            id="discription"
-            onChange={this.handleChange}
-          />
-          <label className="">Number of Hours:</label>
-          <input
-            type="number"
-            required
-            id="hours"
-            value={this.hours}
-            onChange={this.handleChange}
-          />
-          <label className="">Reference Name:</label>
-          <input
-            type="text"
-            required
-            id="refName"
-            value={this.refName}
-            onChange={this.handleChange}
-          />
-          <label className="">Reference Contact:</label>
-          <input
-            type="email"
-            required
-            id="refContact"
-            maxLength={"40"}
-            value={this.refContact}
-            onChange={this.handleChange}
-          />
-          <label className="">Add as a major Highlight:</label>
-          <label className="switch">
-            <input
-              type="checkbox"
-              id="isHighlight"
-              value={this.isHighlight}
-              onChange={this.handleChange} //(e.target.value)}
+      <div className="p-6 ">
+        <div className="FormInput">
+          <h3 className=" pb-5 pt-2  text-2xl">Transcript Data</h3>
+          <form className="block" onSubmit={this.handleSubmit}>
+            <div className="flex my-1  flex-col">
+            <label className="text-base py-2">Year</label>
+            <select className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md" 
+            value={this.year}
+            id="year" 
+            onChange={this.handleChange}>
+              <option value="">Select one</option>
+              <option value="1">2018</option>
+              <option value="2">2019</option>
+              <option value="3">2020</option>
+              <option value="4">2021</option>
+            </select>
+            </div>
+            <div className="flex my-1 flex-col">
+            <label className="text-base py-2">Category</label>
+            <select className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+              value={this.category}
+              id="category"
+              onChange={this.handleChange}
+            >
+              <option value="cat0">Select one</option>
+              <option  value="cat1">LEADERSHIP</option>
+              <option value="cat2">CITIZENSHIP</option>
+              <option value="cat3">SCHOLARSHIP</option>
+            </select>
+            </div>
+            <div className="flex my-1 flex-col">
+            <label className="text-base py-2">Brief Discription</label>
+            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+              type="text"
+              required
+              placeholder="eg: name of NGO and role"
+              maxLength={"120"}
+              value={this.discription}
+              id="discription"
+              onChange={this.handleChange}
             />
-            <span className="slider round"></span>
-          </label>
-  
-          {/* {this.state.isHighlight && (
+            </div>
+            <div className="flex my-1 flex-col">
+            <label className="text-base py-2">Number of Hours</label>
+            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+              type="number"
+              placeholder="54"
+              required
+              id="hours"
+              value={this.hours}
+              onChange={this.handleChange}
+            />
+            </div>
+            <div className="flex my-1 flex-col">
+            <label className="text-base py-2">Reference Name</label>
+            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+              type="text"
+              placeholder="enter the name here"
+              required
+              id="refName"
+              value={this.refName}
+              onChange={this.handleChange}
+            />
+            </div>
+           
+            <div className="flex my-1 flex-col">
+            <label className="text-base py-2">Reference Contact</label>
+            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+              type="email"
+              placeholder="john.doe@gmail.com"
+              required
+              id="refContact"
+              maxLength={"40"}
+              value={this.refContact}
+              onChange={this.handleChange}
+            />
+            </div>
+            <div className="flex my-1 flex-row justify-between items-start">
+            <label className="text-base py-2">Add as a major Highlight</label>
+            <label className="switch mt-2">
+              <input className=""
+                type="checkbox"
+                id="isHighlight"
+                value={this.isHighlight}
+                onChange={this.handleChange} //(e.target.value)}
+              />
+              <span className="slider round"></span>
+            </label>
+            </div>
+           
+            
+
+            {/* {this.state.isHighlight && (
             <div>
               <DragAndDrop onChange={this.handleChange} onDrop={this.onDrop} accept={"image/*"} />
               {this.isImage && <UploadedImage image={this.temp}/>}
             </div>
              
           )} */}
-          
-  
-          {/* <label className="">Add Data to Transcript</label> */}
-          <button>Add to transcript</button>
-        </form>
+
+            {/* <label className="">Add Data to Transcript</label> */}
+            <button>Add to transcript</button>
+          </form>
+        </div>
       </div>
     );
   }
-  
-// };
-  }
-  
-const mapDispatchToProps=(dispatch)=>{
-   return{
-     createExperiece :(experience)=>dispatch(createExperiece(experience))
-   }
+
+  // };
 }
-export default connect(null,mapDispatchToProps)(InputForm);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createExperiece: (experience) => dispatch(createExperiece(experience)),
+  };
+};
+export default connect(null, mapDispatchToProps)(InputForm);
