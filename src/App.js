@@ -18,7 +18,7 @@ import { fetchExperiences } from "./Redux/actions/experienceActions";
 //write code to fetch data from database into json file
 
 const App = (props) => {
-  console.log("app level", props);
+  // console.log("app level", props);
 
   useEffect(() => {
     const fetchExperiences = async () => {
@@ -84,6 +84,7 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     experiences: state.experience,
+    // tempExp: state.tempExperience,
   };
 };
 

@@ -4,7 +4,7 @@ import citizenship from "../../citizenship.svg";
 import scholarship from "../../scholarship.svg";
 
 const ExperienceCard = ({ experience, year, y }) => {
-  console.log("card level", experience);
+  // console.log("card level", experience);
   // icon1={
   //          <SchoolIcon
   //            style={{ fill: "#5EA780", height: "125", width: "125" }}

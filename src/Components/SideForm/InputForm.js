@@ -1,6 +1,7 @@
 import React, { Component, useState, useCallback } from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
+import { createTempExp } from "../../Redux/actions/tempExperienceAction";
 import { connect } from "react-redux";
 // cuid is a simple library to generate unique IDs
 import cuid from "cuid";
@@ -20,7 +21,7 @@ import UploadedImage from "../UploadedImage";
 class InputForm extends Component {
   // render=()=>()=>{
   state = {
-    hours: null,
+    hours: "",
     refName: "",
     discription: "",
     refContact: "",
@@ -30,9 +31,11 @@ class InputForm extends Component {
     //image_:""
   };
   handleChange = (e) => {
+    console.log("albert teting change state ", e.target.value);
     this.setState({
       [e.target.id]: e.target.value,
     });
+    this.props.createTempExp(this.state);
   };
   // const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
   // const [hours, setHours] = useState("");
@@ -125,92 +128,98 @@ class InputForm extends Component {
           <h3 className=" pb-5 pt-2  text-2xl">Transcript Data</h3>
           <form className="block" onSubmit={this.handleSubmit}>
             <div className="flex my-1  flex-col">
-            <label className="text-base py-2">Year</label>
-            <select className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md" 
-            value={this.year}
-            id="year" 
-            onChange={this.handleChange}>
-              <option value="">Select one</option>
-              <option value="1">2018</option>
-              <option value="2">2019</option>
-              <option value="3">2020</option>
-              <option value="4">2021</option>
-            </select>
+              <label className="text-base py-2">Year</label>
+              <select
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                value={this.year}
+                id="year"
+                onChange={this.handleChange.bind(this)}
+              >
+                <option value="">Select one</option>
+                <option value="1">2018</option>
+                <option value="2">2019</option>
+                <option value="3">2020</option>
+                <option value="4">2021</option>
+              </select>
             </div>
             <div className="flex my-1 flex-col">
-            <label className="text-base py-2">Category</label>
-            <select className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-              value={this.category}
-              id="category"
-              onChange={this.handleChange}
-            >
-              <option value="cat0">Select one</option>
-              <option  value="cat1">LEADERSHIP</option>
-              <option value="cat2">CITIZENSHIP</option>
-              <option value="cat3">SCHOLARSHIP</option>
-            </select>
+              <label className="text-base py-2">Category</label>
+              <select
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                value={this.category}
+                id="category"
+                onChange={this.handleChange.bind(this)}
+              >
+                <option value="cat0">Select one</option>
+                <option value="cat1">LEADERSHIP</option>
+                <option value="cat2">CITIZENSHIP</option>
+                <option value="cat3">SCHOLARSHIP</option>
+              </select>
             </div>
             <div className="flex my-1 flex-col">
-            <label className="text-base py-2">Brief Discription</label>
-            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-              type="text"
-              required
-              placeholder="eg: name of NGO and role"
-              maxLength={"120"}
-              value={this.discription}
-              id="discription"
-              onChange={this.handleChange}
-            />
+              <label className="text-base py-2">Brief Discription</label>
+              <input
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                type="text"
+                required
+                placeholder="eg: name of NGO and role"
+                maxLength={"120"}
+                value={this.discription}
+                id="discription"
+                onChange={this.handleChange.bind(this)}
+              />
             </div>
             <div className="flex my-1 flex-col">
-            <label className="text-base py-2">Number of Hours</label>
-            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-              type="number"
-              placeholder="54"
-              required
-              id="hours"
-              value={this.hours}
-              onChange={this.handleChange}
-            />
+              <label className="text-base py-2">Number of Hours</label>
+              <input
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                type="number"
+                placeholder="54"
+                required
+                id="hours"
+                value={this.hours}
+                onChange={this.handleChange.bind(this)}
+              />
             </div>
             <div className="flex my-1 flex-col">
-            <label className="text-base py-2">Reference Name</label>
-            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-              type="text"
-              placeholder="enter the name here"
-              required
-              id="refName"
-              value={this.refName}
-              onChange={this.handleChange}
-            />
+              <label className="text-base py-2">Reference Name</label>
+              <input
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                type="text"
+                placeholder="enter the name here"
+                required
+                id="refName"
+                value={this.refName}
+                onChange={this.handleChange.bind(this)}
+              />
             </div>
-           
+
             <div className="flex my-1 flex-col">
-            <label className="text-base py-2">Reference Contact</label>
-            <input className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-              type="email"
-              placeholder="john.doe@gmail.com"
-              required
-              id="refContact"
-              maxLength={"40"}
-              value={this.refContact}
-              onChange={this.handleChange}
-            />
+              <label className="text-base py-2">Reference Contact</label>
+              <input
+                className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
+                type="email"
+                placeholder="john.doe@gmail.com"
+                required
+                id="refContact"
+                maxLength={"40"}
+                value={this.refContact}
+                onChange={this.handleChange.bind(this)}
+              />
             </div>
             <div className="flex my-1 flex-row justify-between items-start">
-            <label className="text-base py-2">Add as a major Highlight</label>
-            <label className="switch mt-2">
-              <input className=""
-                type="checkbox"
-                id="isHighlight"
-                value={this.isHighlight}
-                onChange={this.handleChange} //(e.target.value)}
-              />
-              <span className="slider round"></span>
-            </label>
+              <label className="text-base py-2">Add as a major Highlight</label>
+              <label className="switch mt-2">
+                <input
+                  className=""
+                  type="checkbox"
+                  id="isHighlight"
+                  value={this.isHighlight}
+                  onChange={this.handleChange.bind(this)} //(e.target.value)}
+                />
+                <span className="slider round"></span>
+              </label>
             </div>
-           
-            
 
             {/* {this.state.isHighlight && (
             <div>
@@ -234,6 +243,7 @@ class InputForm extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     createExperiece: (experience) => dispatch(createExperiece(experience)),
+    createTempExp: (tempExp) => dispatch(createTempExp(tempExp)),
   };
 };
 export default connect(null, mapDispatchToProps)(InputForm);

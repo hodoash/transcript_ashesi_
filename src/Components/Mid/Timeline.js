@@ -7,7 +7,9 @@ import { connect } from "react-redux";
 
 const Timeline = (props) => {
   const { experiences } = props.experiences;
+  const {tempExp}=props.tempExp;
   console.log("timeline", experiences);
+   console.log("temp exp at timeline", tempExp);
   // const {
   //   error,
   //   isPending,
@@ -19,8 +21,8 @@ const Timeline = (props) => {
       <div>
         <h2 className="text-lg mb-2">{props.year}</h2>
         <div className="px-2 mb-5">
-        <div className="bg-red-300 p-0.5 rounded"></div>
-      </div>
+          <div className="bg-red-300 p-0.5 rounded"></div>
+        </div>
       </div>
       {/* {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>} */}
@@ -50,6 +52,7 @@ const mapStateToProps = (state) => {
   return {
     // ...state,
     experiences: state.experience,
+    tempExp: state.tempExp,
   };
 };
 export default connect(mapStateToProps)(Timeline);
