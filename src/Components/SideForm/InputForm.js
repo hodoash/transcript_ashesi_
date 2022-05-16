@@ -1,7 +1,7 @@
 import React, { Component, useState, useCallback } from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
-import { createTempExp } from "../../Redux/actions/tempExperienceAction";
+import { createTempExp, eraseTempExp } from "../../Redux/actions/tempExperienceAction";
 import { connect } from "react-redux";
 // cuid is a simple library to generate unique IDs
 import cuid from "cuid";
@@ -96,7 +96,14 @@ class InputForm extends Component {
     //   id:cuid()
 
     // }
+    
     this.props.createExperiece(this.state);
+    this.props.eraseTempExp();
+    // this.props.createTempExp({});//delete from temp Experience store
+    //clear form
+    this.setState({
+      
+    });
 
     // fetch("http://localhost:8000/experiences/", {
     //   method: "POST",
@@ -244,6 +251,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     createExperiece: (experience) => dispatch(createExperiece(experience)),
     createTempExp: (tempExp) => dispatch(createTempExp(tempExp)),
+    eraseTempExp: (tempExp) => dispatch(eraseTempExp()),
   };
 };
 export default connect(null, mapDispatchToProps)(InputForm);

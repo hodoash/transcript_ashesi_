@@ -3,13 +3,16 @@ import ExperienceCard from "./ExperienceCard";
 import SchoolIcon from "@material-ui/icons/SchoolTwoTone";
 import useFetch from "../useFetch";
 import User from "../Top/User";
-import { connect } from "react-redux";
+import { connect,useSelector } from "react-redux";
+import TempExpCard from "./TempExpCard";
 
 const Timeline = (props) => {
   const { experiences } = props.experiences;
-  const {tempExp}=props.tempExp;
-  console.log("timeline", experiences);
+  // const {tempExp}=props.tempExp;
+  const tempExp = useSelector(state=>state.tempExp);
+  // console.log("timeline", experiences);
    console.log("temp exp at timeline", tempExp);
+
   // const {
   //   error,
   //   isPending,
@@ -45,6 +48,16 @@ const Timeline = (props) => {
 
           // />
         ))}
+
+        {tempExp && 
+        <div key={tempExp.id}>
+          <ExperienceCard
+          experience={tempExp}
+          year={props.year}
+          y={props.y}
+          />
+        </div>
+        }
     </div>
   );
 };
@@ -52,7 +65,7 @@ const mapStateToProps = (state) => {
   return {
     // ...state,
     experiences: state.experience,
-    tempExp: state.tempExp,
+    // tempExp: state.tempExp,
   };
 };
 export default connect(mapStateToProps)(Timeline);
