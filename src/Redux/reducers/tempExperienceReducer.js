@@ -22,15 +22,15 @@ const innitState = {
 const tempExperienceReducer = (state = {}, action) => {
   if (action.type === "CREATE_TEMP_EXPERIENCE") {
     console.log("creating temp in reducer", action.tempExp);
-    
-    return {id:"ert56",...action.tempExp};
-  }
-  else if (action.type === "ERASE_TEMP_EXPERIENCE"){
+
+    return { id: "ert56", ...action.tempExp };
+  } else if (action.type === "ERASE_TEMP_EXPERIENCE") {
     console.log("deleting temp in reducer", action.tempExp);
-    
+
     return null;
-  }
-  return false;
+    // }
+    
+  }return state;
 };
 // const tempExperienceReducer = (state = innitState, action) => {
 //     switch (action.type) {

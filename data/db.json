@@ -185,36 +185,6 @@
       "category": "cat3",
       "isHighlight": false,
       "id": 25
-    },
-    {
-      "hours": "2",
-      "refName": "23432svcxc",
-      "discription": "test for yeear 1",
-      "refContact": "qwefghgfd@gmail.com",
-      "year": "1",
-      "category": "cat1",
-      "isHighlight": false,
-      "id": 27
-    },
-    {
-      "hours": "12",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "thest one",
-      "refContact": "qwefghgfd@gmail.com",
-      "year": "1",
-      "category": "cat1",
-      "isHighlight": false,
-      "id": 28
-    },
-    {
-      "hours": "89",
-      "refName": "sdfvbvfd dfgfd",
-      "discription": "this is a long test to the evrb rbetb gtbgbdb bdbrdbf gbdtbd gbdtbdtb g brdrbrdgnf",
-      "refContact": "qwefghgfd@gmail.com",
-      "year": "2",
-      "category": "cat2",
-      "isHighlight": false,
-      "id": 30
     }
   ],
   "images": [

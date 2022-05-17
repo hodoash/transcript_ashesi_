@@ -14,11 +14,13 @@ import Page2 from "./Components/Pages/Page2";
 import InputForm from "./Components/SideForm/InputForm";
 import TopNavSection from "./Components/TopNav/TopNavSection";
 import { fetchExperiences } from "./Redux/actions/experienceActions";
+import FromTabs from "./Components/Top/FromTabs";
 
 //write code to fetch data from database into json file
 
 const App = (props) => {
   // console.log("app level", props);
+  // const tempExp = useSelector(state=>state.tempExp);
 
   useEffect(() => {
     const fetchExperiences = async () => {
@@ -74,6 +76,7 @@ const App = (props) => {
         </div>
 
         <div className="fixed right-10 w-1/6 min-h-fit col-span-1 rounded  bg-white">
+          {/* <FromTabs/> */}
           <InputForm er />
         </div>
       </div>

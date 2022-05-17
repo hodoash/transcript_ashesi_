@@ -1,7 +1,10 @@
 import React, { Component, useState, useCallback } from "react";
 import DragAndDrop from "../DragAndDrop";
 import { createExperiece } from "../../Redux/actions/experienceActions";
-import { createTempExp, eraseTempExp } from "../../Redux/actions/tempExperienceAction";
+import {
+  createTempExp,
+  eraseTempExp,
+} from "../../Redux/actions/tempExperienceAction";
 import { connect } from "react-redux";
 // cuid is a simple library to generate unique IDs
 import cuid from "cuid";
@@ -19,23 +22,36 @@ import UploadedImage from "../UploadedImage";
 // }
 
 class InputForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hours: "",
+      refName: "",
+      discription: "",
+      refContact: "",
+      year: "",
+      category: "",
+      isHighlight: false,
+      //image_:""
+    };
+  }
   // render=()=>()=>{
-  state = {
-    hours: "",
-    refName: "",
-    discription: "",
-    refContact: "",
-    year: "",
-    category: "",
-    isHighlight: false,
-    //image_:""
-  };
+
   handleChange = (e) => {
     console.log("albert teting change state ", e.target.value);
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
-    this.props.createTempExp(this.state);
+    // this.setState({
+    //   [e.target.id]: e.target.value,
+    // });
+    this.setState((state) => ({
+      
+        ...state,
+        [e.target.id]: e.target.value,
+      }));
+    //  };
+
+    console.log("sdfgfds dfgfds", this.state);
+    this.props.createTempExp(this.state); //pushes the typed data
   };
   // const [discription, setDiscriptiion] = useState(""); //add all the elemetns later
   // const [hours, setHours] = useState("");
@@ -96,14 +112,12 @@ class InputForm extends Component {
     //   id:cuid()
 
     // }
-    
+
     this.props.createExperiece(this.state);
     this.props.eraseTempExp();
     // this.props.createTempExp({});//delete from temp Experience store
     //clear form
-    this.setState({
-      
-    });
+    this.setState({});
 
     // fetch("http://localhost:8000/experiences/", {
     //   method: "POST",
@@ -138,7 +152,7 @@ class InputForm extends Component {
               <label className="text-base py-2">Year</label>
               <select
                 className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-                value={this.year}
+                value={this.state.year}
                 id="year"
                 onChange={this.handleChange.bind(this)}
               >
@@ -153,7 +167,7 @@ class InputForm extends Component {
               <label className="text-base py-2">Category</label>
               <select
                 className="border-2 mb-2 text-grey-100 p-2 appearance-none rounded-md"
-                value={this.category}
+                value={this.state.category}
                 id="category"
                 onChange={this.handleChange.bind(this)}
               >
@@ -171,7 +185,7 @@ class InputForm extends Component {
                 required
                 placeholder="eg: name of NGO and role"
                 maxLength={"120"}
-                value={this.discription}
+                value={this.state.discription}
                 id="discription"
                 onChange={this.handleChange.bind(this)}
               />
@@ -184,7 +198,7 @@ class InputForm extends Component {
                 placeholder="54"
                 required
                 id="hours"
-                value={this.hours}
+                value={this.state.hours}
                 onChange={this.handleChange.bind(this)}
               />
             </div>
@@ -196,7 +210,7 @@ class InputForm extends Component {
                 placeholder="enter the name here"
                 required
                 id="refName"
-                value={this.refName}
+                value={this.state.refName}
                 onChange={this.handleChange.bind(this)}
               />
             </div>
@@ -210,7 +224,7 @@ class InputForm extends Component {
                 required
                 id="refContact"
                 maxLength={"40"}
-                value={this.refContact}
+                value={this.state.refContact}
                 onChange={this.handleChange.bind(this)}
               />
             </div>
@@ -238,9 +252,10 @@ class InputForm extends Component {
 
             {/* <label className="">Add Data to Transcript</label> */}
             <div className=" mx-auto mb-10 mt-20">
-            <button className="text-lg border bg-trasparent text-red-600 border-red-600 px-14 py-2 rounded-md hover:bg-red-600 hover:text-white">Add to transcript</button>
+              <button className="text-lg border bg-trasparent text-red-600 border-red-600 px-14 py-2 rounded-md hover:bg-red-600 hover:text-white">
+                Add to transcript
+              </button>
             </div>
-           
           </form>
         </div>
       </div>

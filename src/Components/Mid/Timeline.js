@@ -38,15 +38,6 @@ const Timeline = (props) => {
               y={props.y}
             />
           </div>
-          // <ExperienceCard
-          // experiences={experiences}
-          //   icon={
-          //     <SchoolIcon
-          //       style={{ fill: "#5EA780", height: "125", width: "125" }}
-          //     />
-          //   }
-
-          // />
         ))}
 
         {tempExp && 
