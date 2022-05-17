@@ -30,7 +30,7 @@ const Pillars = (props) => {
   return (
     <div className=" mt-2.5">
       <div className="text-center">
-        <h1 className="text-xl">SUMMARY OF ASHESI EXPERIENCES</h1>
+        <h1 className="text-xl ">SUMMARY OF ASHESI EXPERIENCES</h1>
       </div>
       <div className="mt-6 grid grid-cols-3 items-center">
         <div className=" m-auto">

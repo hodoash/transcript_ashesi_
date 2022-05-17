@@ -10,7 +10,7 @@ const MidSection = (props) => {
   return (
     <div>
       <div className="mt-7 text-center">
-        <h1 className="text-xl">EXPERIENCE TIMELINE</h1>
+        <h1 className="text-xl text-[#844243]">EXPERIENCE TIMELINE</h1>
         <div className="mt-6  mx-10 grid grid-cols-4 gap-5">
           <Timeline year="2018" y="1" />
           <Timeline year="2019" y="2" />

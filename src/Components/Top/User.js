@@ -5,7 +5,7 @@ const User = ({ user }) => {
     <div>
       {/* {user.map((user) => ( */}
         <div className="text-left">
-          <h1 className="text-xl ">STUDENT INFORMATION</h1>
+          <h1 className="text-xl text-[#844243] ">STUDENT INFORMATION</h1>
           <div>
             <div className="grid grid-cols-2 gap-1 mt-1.5">
               <h2 className="col-span-1 text-base">NAME</h2>

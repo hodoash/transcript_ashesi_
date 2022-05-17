@@ -63,7 +63,7 @@ const App = (props) => {
   return (
     <div className="bg-zinc-200 p-10">
       <TopNavSection />
-      <div className="  grid grid-cols-5 gap-10">
+      <div className=" relative grid grid-cols-5 gap-10">
         <div className="col-span-4 rounded ">
           <div className="bg-white rounded mb-10">
             <Page1 />
@@ -73,7 +73,7 @@ const App = (props) => {
           </div>
         </div>
 
-        <div className="col-span-1 rounded  bg-white">
+        <div className="fixed right-10 w-1/6 min-h-fit col-span-1 rounded  bg-white">
           <InputForm er />
         </div>
       </div>

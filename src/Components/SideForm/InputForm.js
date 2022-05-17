@@ -130,7 +130,7 @@ class InputForm extends Component {
   // },[image_])
   render() {
     return (
-      <div className="p-6 ">
+      <div className="p-6">
         <div className="FormInput">
           <h3 className=" pb-5 pt-2  text-2xl">Transcript Data</h3>
           <form className="block" onSubmit={this.handleSubmit}>
@@ -214,7 +214,7 @@ class InputForm extends Component {
                 onChange={this.handleChange.bind(this)}
               />
             </div>
-            <div className="flex my-1 flex-row justify-between items-start">
+            {/* <div className="flex my-1 flex-row justify-between items-start">
               <label className="text-base py-2">Add as a major Highlight</label>
               <label className="switch mt-2">
                 <input
@@ -226,7 +226,7 @@ class InputForm extends Component {
                 />
                 <span className="slider round"></span>
               </label>
-            </div>
+            </div> */}
 
             {/* {this.state.isHighlight && (
             <div>
@@ -237,7 +237,10 @@ class InputForm extends Component {
           )} */}
 
             {/* <label className="">Add Data to Transcript</label> */}
-            <button>Add to transcript</button>
+            <div className=" mx-auto mb-10 mt-20">
+            <button className="text-lg border bg-trasparent text-red-600 border-red-600 px-14 py-2 rounded-md hover:bg-red-600 hover:text-white">Add to transcript</button>
+            </div>
+           
           </form>
         </div>
       </div>

@@ -35,7 +35,7 @@ const ExperienceCard = ({ experience, year, y }) => {
           
             </div>
           
-          <p className="text-lg ml-2">{experience.discription}</p>
+          <p className="text-base ml-2">{experience.discription}</p>
         </div>
       )}
     </div>

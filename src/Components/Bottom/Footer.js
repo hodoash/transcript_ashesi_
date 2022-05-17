@@ -3,7 +3,7 @@ import React from "react";
 function Footer(props) {
   return (
     <div className="">
-      <div className="px-8 ">
+      <div className="px-8 mt-4">
         <div className="bg-zinc-100 p-1 rounded"></div>
       </div>
       <div className="flex justify-between px-8 py-3">
